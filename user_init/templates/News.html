@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container my-5 py">
+<!--Section: Block Content-->
+  <section>
+
+    <div class="card indigo" style="background-color: transparent; border-color: gray;">
+      <div class="card-body">
+        <center><h2 style="color: gray;">News and Info </h2></center>
+            {% for News in News %}
+                <article class="media content-section">
+                  <div class="media-body">
+                    <div class="article-metadata">
+                      <a class="mr-2" href="#">{{ News.Latest_news }}</a>
+                      <small class="text-muted">{{ News.date_deposited }}</small>
+                    </div>
+                    <p class="article-content" style="color: gray;">{{ News.news_content }}</p>
+                  </div>
+                </article>
+                {%  endfor %}
+                </div>
+               </div>
+               </section>
+{% endblock content %}

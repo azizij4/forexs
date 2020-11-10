@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container my-5 py">
+<!--Section: Block Content-->
+  <section>
+
+    <div class="card indigo" style="background-color: transparent; border-color: gray;">
+      <div class="card-body">
+        <center><h2 style="color: gray;">You can contact us</h2></center>
+
+        <div class="col-md-8 col-sm-12" style="align-content: center;">
+          <form class="p-5 grey-text">
+            <h5 class="font-weight-bold text-center" style="color: gray;">message us via Email</h5>
+            <div class="md-form form-sm"> <i class="fa fa-user prefix"></i>
+              <input type="text" id="form3" class="form-control form-control-sm">
+              <label for="form3"style="color: gray;">Your name</label>
+            </div>
+            <div class="md-form form-sm"> <i class="fa fa-envelope prefix"></i>
+              <input type="text" id="form2" class="form-control form-control-sm">
+              <label for="form2"style="color: gray;">Your email</label>
+            </div>
+            <div class="md-form form-sm"> <i class="fa fa-tag prefix"></i>
+              <input type="text" id="form32" class="form-control form-control-sm">
+              <label for="form34" style="color: gray;">Subject</label>
+            </div>
+            <div class="md-form form-sm"> <i class="fa fa-pencil prefix"></i>
+              <textarea type="text" id="form8" class="md-textarea form-control form-control-sm" rows="4"></textarea>
+              <label for="form8" style="color: gray;">Your message</label>
+            </div>
+            <div class="text-center mt-4">
+              <button class="btn btn-primary">Send</button> 
+            </div>
+          </form>
+          <!-- Form contact -->
+        </div>
+          </div>
+    </div>
+
+
+  </section>
+
+   {% endblock content %}

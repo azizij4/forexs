@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+     {% if title %}
+        <title>J4mEnvestiment | {{ title }}</title>
+    {% else %}
+        <title>J4mEnvestiment</title>
+    {% endif %}
+
+    <title>User</title>
+    <style type="text/css">
+      body {
+  background: #333;
+  color: #333333;
+  margin-top: 5rem;
+}
+
+h1, h2, h3, h4, h5, h6 ,p ,li ,ul ,label {
+  color: white;
+}
+#intro {
+      background: url("{{url_for('static', filename='bitcoin-5.jpg')}}" />)no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+#Plan {
+      background-color: blue;
+    }    
+
+
+.bg-steel {
+  background-color: #330000;
+}
+
+.site-header .navbar-nav .nav-link {
+  color: #cbd5db;
+  padding: 15px 25px;
+}
+
+.site-header .navbar-nav .nav-link:hover {
+  color: green;
+}
+
+.site-header .navbar-nav .nav-link.active {
+  font-weight: 800;
+}
+
+.content-section {
+  background: #300000;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 27px;
+  color: white;
+}
+
+.content:hover {
+ color: green;
+}
+
+.article-title {
+  color: #444444;
+}
+
+a.article-title:hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+#footer {
+  background-color: #330000;
+}
+
+html{
+  background:#333;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;}
+
+#bitcoin{
+  padding-top:80px;
+  width:200px;
+  margin:0 auto;
+  display:block;
+  text-align:center;
+  color:#888888;}
+
+.path {
+  stroke-dasharray: 2110;
+  stroke-dashoffset: 2110;
+  stroke-width:2;
+  stroke-linecap:round;
+  animation: dash 6s linear infinite;
+  fill-opacity:0;
+  stroke:orange;
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 2110;
+    opacity:0;
+    stroke:orange;
+  }
+  15%{
+    opacity:1;
+    stroke:orange;
+  }
+  70%{
+    opacity:1;
+    stroke:orange;
+  }
+  100%{
+    stroke-dashoffset:0;
+    opacity:0;
+    stroke:yellow;
+  }
+}
+    </style>
+  </head>
+  <body>
+     <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+        <div class="container">
+          <a class="navbar-brand mr-4" href="/">J4mEnvest</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+              <a class="nav-item nav-link" href="/home">Home</a>
+              <a class="nav-item nav-link" href="/about">About</a>
+               <a class="nav-item nav-link" href="/contact">How to Invest</a>
+              <a class="nav-item nav-link" href="/contact">Contact us</a>
+              <a class="nav-item nav-link" href="/contact">FAQ</a>
+
+            </div>
+            <!-- Navbar Right Side -->
+            <div class="navbar-nav">
+              {% if current_user.is_authenticated %}
+                  <a class="nav-item nav-link" href="/Account">Account</a>
+                  <a class="nav-item nav-link" href="/Logout">Logout</a>
+              {% else %}
+                  <a class="nav-item nav-link" href="/Login">Login</a>
+                  <a class="nav-item nav-link" href="/register">register</a>
+               {% endif %}
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+  <div class="container">
+  
+    <div class="row">
+       <div class="col-md-4">
+        <div class="content-section">
+            <h3>{{ current_user.username }}</h3>
+            <p class='text-muted'>
+              <ul class="list-group">
+                <li class="list-group-item list-group-item-light"><a class="nav-item nav-link" href="/Account">Account</a></li>
+                <li class="list-group-item list-group-item-light"><a class="nav-item nav-link" href="/make_deposit">Make Deposit</a></li>
+                <li class="list-group-item list-group-item-light"><a class="nav-item nav-link" href="/make_withdraw"> Withdraw</a></li>
+                <li class="list-group-item list-group-item-light"><a class="nav-item nav-link" href="/active_deposit">Active deposit</a></li>
+                <li class="list-group-item list-group-item-light"><a class="nav-item nav-link" href="/withdraw_history">Withdraw History</a></li>
+                <li class="list-group-item list-group-item-light"><a class="nav-item nav-link" href="/deposit_history">Deposit History</a></li>
+                <li class="list-group-item list-group-item-light"><a class="nav-item nav-link" href="/edit_account"> Edit Account</a></li>
+               
+              </ul>
+            </p>
+          </div>
+
+       </div>
+        <div class="col-md-8">
+            <h2><center>Edit Account</center></h2></br>
+        </div>
+
+        </div>
+        </div>
+
+
+
+<footer id="footer">
+</br></br>
+<div class="col-md-12">
+  <div class="row">
+    <div class="col-sm-3">
+      <p>Arusha - Tanzania</p>
+      <p>Mobile: +255 692 946 575</p>
+      <p>Mobile: +255 622 295 131 </p>
+      <p>Mobile: +255 626 877 748</p>
+      
+      <p>Designed and coded by Aziz j4</a> </p>
+    </div>
+    <div class="col-sm-3">
+      <ul class="list-unstyled">
+        <li><a href="/home">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-3">
+      <ul class="list-unstyled">
+        <li><a href="">facebook</a></li>
+        <li><a href="">twitter</a></li>
+        <li><a href="">youtube</a></li>
+        <li><a href="">linked-in</a></li>
+        <li><p>azizimfinanga1@gmail.com</p></li></P>
+         <li><p>azizijumanne63@gmail.com</p></li></P>
+      </ul>
+    </div>
+    <div class="col-sm-3">
+      <h6>Useful links</h6>
+      <ul class="list-unstyled">
+        <li><a href="https://en.wikipedia.org/wiki/Cryptocurrency">About Crytocurrency</a></li>
+        <li><a href="https://localbitcoins.com/">Local bitcoin</a></li>
+        <li><a href="https://coinmarketcap.com/">Coin market Cup</a></li>
+        <li><a href="https://www.internetsociety.org/issues/blockchain/?gclid=EAIaIQobChMIp7b0z9qU5gIVVfhRCh261gamEAAYASAAEgLhrfD_BwE">Block chain</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</br>
+<h6> <center>&copy;J4mSoftec Company.</center></h6>
+</br>
+</footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

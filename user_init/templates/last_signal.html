@@ -1,0 +1,30 @@
+
+{% extends "layout.html"%}
+{% block content %}
+<div class="container my-5 py">
+<!--Section: Block Content-->
+  <section>
+
+    <div class="card indigo" style="background-color: transparent; border-color: gray;">
+      <div class="card-body">
+        <center><h2 style="color: gray;">Our last forex signal</h2></center>
+
+      {% for ls in last_signal %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ ls.Pair }}</a>
+              <small class="text-muted">{{ ls.Time }}</small>
+            </div>
+            <h2><a class="article-title" href="#" style="color: #888888;">Take profit 1(TP1): {{ ls.Take_profitP1 }}</a></h2>
+            <h2><a class="article-title" href="#" style="color: green">Take profit 2(TP2): {{ ls.Take_profitTP2 }}</a></h2>
+            <h2><a class="article-title" href="#" style="color: red;">Stop loss (SL): {{ ls.Stop_lossST }}</a></h2>
+          </div>
+        </article>
+    {% endfor %}
+      </div>
+    </div>
+
+
+  </section>
+{% endblock %}

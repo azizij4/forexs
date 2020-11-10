@@ -1,0 +1,280 @@
+{% extends "layout.html" %}
+{% block content %}
+<style type="text/css">
+  .card-body{
+    color: black;
+  }
+</style>
+<div class="container" style="margin-bottom: 2em;margin-top: 4em;">
+  <center><h2 style="color: orange;">J4M all forex signal </h2></center>
+  <h4 style="color: green;">Currency || Boom Crash || Volatility || Cryptos || Oil and Gas || Gold and Commodities and More ...</h4>
+</div>
+<div class="container" style="margin-bottom: 2em;margin-top: 2em;">
+
+  <div class="row">
+    <div class="col md-4">
+<div class="card" style="width: 18rem; color: #000100" >
+  <img class="card-img-top" src="{{url_for("static",filename="card1.jpg")}}" alt="Card image cap" style="height: 150px;">
+  <div class="card-body">
+    <h5 class="card-title">1 Month Subscription</h5>
+    <form action="/charge" method="post">
+    <article>
+      <label>
+        <span>Amount is $100</span>
+      </label>
+    </article>
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="{{ key }}"
+            data-description="J4M fx V.I.P Signal"
+            data-amount="1"
+            data-locale="auto"></script>
+  </form>
+  </div>
+  <img src="{{url_for("static",filename="bitcoin.png")}}" style="height: 40%;width: 100%;">
+  <!--Trigger-->
+<a class="plan1-trigger" href="#" data-target="#plan1" data-toggle="modal">Click to Pay via Bitcoin</a>
+
+<div id="plan1" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    
+    <div class="modal-content">
+      <div class="modal-body">
+        <button data-dismiss="modal" class="close">&times;</button>
+        <center><img src="{{url_for("static",filename="bitc.png")}}" style="height: 20%;width: 50%; position: left; margin-bottom: 1em;"></center>
+        <center><h4 style="color: gray; margin-bottom: 1em;">Please fill all field below for your bitcoin transaction</h4></center>
+       <form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Send Bitcoin to address beleow</label>
+      <h6 id="secretInfo"style="color: black; font-size: 21px;">1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2</h6>
+      <button type="button" id="btnCopy">Copy address</button>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Amaount in USD</label>
+      <h6 style="color: gray">100</h6>
+    </div>
+
+
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="eg: j4m@gmail.com">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputnumber">Telegram number</label>
+      <input type="number" class="form-control" id="inputnumber" placeholder="eg: +255789454630">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Enter your bitcoin address used to pay</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="eg: 1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2">
+  </div>
+  <div class="form-group">
+    <label for="inputAddress2">Enter transaction ID (copy and paste here)</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="eg: f4184fc596403b9d638783cf57adfe4c75c605f6356fbc91338530e9831e9e16 ">
+  </div>
+   <label for="inputAddress">Upload screenshot of your payment(JPG,PNG)</label>
+  <div class="input-group mb-3">
+  <div class="custom-file">
+    <input type="file" class="custom-file-input" id="inputGroupFile02">
+    <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+  </div>
+  <div class="input-group-append">
+    <span class="input-group-text" id="">Upload</span>
+  </div>
+</div>
+  <center><button type="submit" class="btn btn-primary">Send to complete your payment confirmation</button></center>
+</form>
+      </div>
+    </div>
+  </div>  
+</div>
+</div>
+
+</div>
+
+<div class="col md-4">
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{url_for("static",filename="card2.jpg")}}" alt="Card image cap" style="height: 150px;">
+  <div class="card-body">
+    <h5 class="card-title">2 Month Subscription</h5>
+    <form action="/charge" method="post">
+    <article>
+      <label>
+        <span>Amount is $200</span>
+      </label>
+    </article>
+
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="{{ key }}"
+            data-description="J4M fx V.I.P Signal"
+            data-amount="1"
+            data-locale="auto"></script>
+  </form>
+  </div>
+
+  <img src="{{url_for("static",filename="bitcoin.png")}}" style="height: 40%;width: 100%;">
+ <a class="plan2-trigger" href="#" data-target="#plan2" data-toggle="modal">Click to Pay via Bitcoin</a>
+
+<div id="plan2" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    
+    <div class="modal-content">
+      <div class="modal-body">
+        <button data-dismiss="modal" class="close">&times;</button>
+        <center><img src="{{url_for("static",filename="bitc.png")}}" style="height: 20%;width: 50%; position: left; margin-bottom: 1em;"></center>
+        <center><h4 style="color: gray; margin-bottom: 1em;">Please fill all field below for your bitcoin transaction</h4></center>
+       <form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Send Bitcoin to address beleow</label>
+      <h6 id="secretInfo"style="color: black; font-size: 21px;">1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2</h6>
+      <button type="button" id="btnCopy">Copy address</button>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Amaount in USD</label>
+      <h6 style="color: gray">200</h6>
+    </div>
+
+
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="eg: j4m@gmail.com">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputnumber">Telegram number</label>
+      <input type="number" class="form-control" id="inputnumber" placeholder="eg: +255789454630">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Enter your bitcoin address used to pay</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="eg: 1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2">
+  </div>
+  <div class="form-group">
+    <label for="inputAddress2">Enter transaction ID (copy and paste here)</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="eg: f4184fc596403b9d638783cf57adfe4c75c605f6356fbc91338530e9831e9e16 ">
+  </div>
+   <label for="inputAddress">Upload screenshot of your payment(JPG,PNG)</label>
+  <div class="input-group mb-3">
+  <div class="custom-file">
+    <input type="file" class="custom-file-input" id="inputGroupFile02">
+    <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+  </div>
+  <div class="input-group-append">
+    <span class="input-group-text" id="">Upload</span>
+  </div>
+</div>
+  <center><button type="submit" class="btn btn-primary">Send to complete your payment confirmation</button></center>
+</form>
+      </div>
+    </div>
+  </div>  
+</div>
+</div>
+
+</div>
+
+<div class="col md-4">
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{url_for("static",filename="card4.jpg")}}" alt="Card image cap" style="height: 150px;">
+  <div class="card-body">
+    <h5 class="card-title">3 Month Subscription</h5>
+    <form action="/charge" method="post">
+    <article>
+      <label>
+        <span>Amount is $300</span>
+      </label>
+    </article>
+
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="{{ key }}"
+            data-description="J4M fx V.I.P Signal"
+            data-amount="1"
+            data-locale="auto"></script>
+  </form>
+ 
+  </div>
+
+  <img src="{{url_for("static",filename="bitcoin.png")}}" style="height: 40%;width: 100%;">
+  <a class="plan3-trigger" href="#" data-target="#plan3" data-toggle="modal">Click to Pay via Bitcoin</a>
+
+<div id="plan3" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    
+    <div class="modal-content">
+      <div class="modal-body">
+        <button data-dismiss="modal" class="close">&times;</button>
+        <center><img src="{{url_for("static",filename="bitc.png")}}" style="height: 20%;width: 50%; position: left; margin-bottom: 1em;"></center>
+        <center><h4 style="color: gray; margin-bottom: 1em;">Please fill all field below for your bitcoin transaction</h4></center>
+       <form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Send Bitcoin to address beleow</label>
+      <h6 id="secretInfo"style="color: black; font-size: 21px;">1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2</h6>
+      <button type="button" id="btnCopy">Copy address</button>
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Amaount in USD</label>
+      <h6 style="color: gray">300</h6>
+    </div>
+
+
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Email</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="eg: j4m@gmail.com">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputnumber">Telegram number</label>
+      <input type="number" class="form-control" id="inputnumber" placeholder="eg: +255789454630">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Enter your bitcoin address used to pay</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="eg: 1BvBMSEYstWetqTFn5Au4m4GFg7xJaNVN2">
+  </div>
+  <div class="form-group">
+    <label for="inputAddress2">Enter transaction ID (copy and paste here)</label>
+    <input type="text" class="form-control" id="inputAddress2" placeholder="eg: f4184fc596403b9d638783cf57adfe4c75c605f6356fbc91338530e9831e9e16 ">
+  </div>
+   <label for="inputAddress">Upload screenshot of your payment(JPG,PNG)</label>
+  <div class="input-group mb-3">
+  <div class="custom-file">
+    <input type="file" class="custom-file-input" id="inputGroupFile02">
+    <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+  </div>
+  <div class="input-group-append">
+    <span class="input-group-text" id="">Upload</span>
+  </div>
+</div>
+  <center><button type="submit" class="btn btn-primary">Send to complete your payment confirmation</button></center>
+</form>
+      </div>
+    </div>
+  </div>  
+</div>
+</div>
+
+</div>
+</div>
+  
+
+  </div>
+   </div>
+    <script type="text/javascript">
+      var $body = document.getElementsByTagName('body')[0];
+      var $btnCopy = document.getElementById('btnCopy');
+      var secretInfo = document.getElementById('secretInfo').innerHTML;
+
+      var copyToClipboard = function(secretInfo) {
+        var $tempInput = document.createElement('INPUT');
+        $body.appendChild($tempInput);
+        $tempInput.setAttribute('value', secretInfo)
+        $tempInput.select();
+        document.execCommand('copy');
+        $body.removeChild($tempInput);
+      }
+
+      $btnCopy.addEventListener('click', function(ev) {
+        copyToClipboard(secretInfo);
+      });
+    </script>
+{% endblock %}
